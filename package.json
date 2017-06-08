@@ -1,0 +1,31 @@
+{
+  "name": "teem-link-preview",
+  "version": "0.0.1",
+  "description": "Independent web server for OGP info for link previews in teem pad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krshubham/teem-link-preview.git"
+  },
+  "author": "Kumar Shubham",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/krshubham/teem-link-preview/issues"
+  },
+  "homepage": "https://github.com/krshubham/teem-link-preview#readme",
+  "dependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^2.6.0",
+    "metascraper": "^1.0.6"
+  },
+  "devDependencies": {
+    "gulp-babel": "^6.1.2"
+  }
+}
