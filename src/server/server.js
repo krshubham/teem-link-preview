@@ -3,9 +3,10 @@
  */
 
 import express from 'express';
-import config from '../server-config/config';
 import routes from '../routes';
 import bodyParser from 'body-parser';
+const config = require('../../config.json');
+
 
 const port = config.port;
 const server = express();
