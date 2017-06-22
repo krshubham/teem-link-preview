@@ -14,6 +14,11 @@ const server = express();
 server.use(bodyParser.urlencoded({extended: false}));
 server.use(bodyParser.json());
 
+server.all('*', (req,res,next) => {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers','Origin, X-Requested-With, Content-Type, Accept');
+	next();
+});
 
 routes(server);
 
@@ -28,9 +33,3 @@ server.listen(port, () => {
 
 
 export default server;
-
-
-
-
-
-

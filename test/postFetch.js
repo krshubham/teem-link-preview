@@ -7,7 +7,8 @@ const port = require('../config.json').port;
 chai.use(chaiHttp);
 
 
-describe('postFetch', () => {
+describe('postFetch', function () {
+	this.timeout(10000);
 	//change this URL to test for any webpage
 	const URI_TO_TEST = 'https://krshubham.github.io';
 	it('should make a post request to the fetch route', (done) => {
@@ -35,6 +36,3 @@ describe('postFetch', () => {
 		});
 	});
 });
-
-
-
