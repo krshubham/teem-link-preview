@@ -1,7 +1,6 @@
 /**
- * Created by ks on 08/06/17.
- */
-
+* Created by ks on 08/06/17.
+*/
 import express from 'express';
 import routes from '../routes';
 import bodyParser from 'body-parser';
@@ -24,11 +23,11 @@ routes(server);
 
 
 /**
- * @listen {port} config.port
- */
+* @listen {port} config.port
+*/
 server.listen(port, () => {
-    "use strict";
-    console.log(`Server is listening on port ${port}`);
+	"use strict";
+	console.log(`Server is listening on port ${port}`);
 });
 
 

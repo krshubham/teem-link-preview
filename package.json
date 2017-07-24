@@ -25,6 +25,8 @@
     "gulp": "^3.9.1",
     "gulp-sourcemaps": "^2.6.0",
     "metascraper": "^1.0.6",
+    "mustache": "^2.3.0",
+    "request": "^2.81.0",
     "validator": "^7.0.0"
   },
   "devDependencies": {
