@@ -10,27 +10,28 @@ import validator from 'validator';
 const router = express.Router();
 
 router.post('/', (req,res) => {
-	const scrapeURL = req.body.url;
+  'use strict';
+  const scrapeURL = req.body.url;
 
-	//set the 'Access-Control-Allow-Origin' header to '*' so that we can have access to this server
-	res.set('Access-Control-Allow-Origin', '*');
+  //set the 'Access-Control-Allow-Origin' header to '*' so that we can have access to this server
+  res.set('Access-Control-Allow-Origin', '*');
 
-	if(validator.isURL(scrapeURL)){
-		Metascraper
-		.scrapeUrl(scrapeURL)
-		.then((metadata) => {
-			res.json(metadata);
-		})
-		.catch((err) => {
-			res.json(err);
-		});
-	}
-	else{
-		const URL_ERROR = {
-			error: "The URL is not in correct format"
-		};
-		res.json(URL_ERROR);
-	}
+  if(validator.isURL(scrapeURL)){
+    Metascraper
+    .scrapeUrl(scrapeURL)
+    .then((metadata) => {
+      res.json(metadata);
+    })
+    .catch((err) => {
+      res.json(err);
+    });
+  }
+  else{
+    const URL_ERROR = {
+      error: 'The URL is not in correct format'
+    };
+    res.json(URL_ERROR);
+  }
 
 });
 

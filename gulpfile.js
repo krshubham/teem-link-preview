@@ -9,6 +9,7 @@ const exec = require('child_process').exec;
 const path = require('path');
 
 gulp.task('babel', () => {
+	'use strict';
 	gulp.src('src/**/*.js')
 	.pipe(sourcemaps.init())
 	.pipe(babel())
@@ -17,6 +18,7 @@ gulp.task('babel', () => {
 });
 
 gulp.task('babel:watch', () => {
+	'use strict';
 	gulp.watch('src/**/*.js', ['babel']);
 });
 

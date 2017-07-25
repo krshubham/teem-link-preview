@@ -1,6 +1,6 @@
 {
   "name": "teem-link-preview",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Independent web server for OGP info for link previews in teem pad",
   "main": "index.js",
   "scripts": {
