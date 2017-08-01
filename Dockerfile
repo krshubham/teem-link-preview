@@ -18,14 +18,18 @@ RUN npm install -g babel-cli
 
 USER teemlp
 
-COPY ./**/*.* /home/teemlp/app/
+RUN echo $HOME
 
-RUN cd /home/teemlp/app
+COPY . $HOME/app/
 
-RUN ls
+RUN cd $HOME/app
 
-RUN npm start
+USER root
+
+RUN npm install
 
 EXPOSE 9090
+
+CMD ["npm", "start"]
 
 

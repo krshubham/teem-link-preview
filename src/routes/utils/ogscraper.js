@@ -13,7 +13,8 @@ export default (teemId) => {
     }, function () {
       let encodableObj = JSON.stringify({
         'root.type': 'project' ,
-        'root.id': teemId
+        'root.id': teemId,
+        'root.shareMode': 'public'
       });
       let encodedURL = encodeURIComponent(encodableObj);
       request(`https://swellrt.teem.works/swell/model?q=${encodedURL}`, (err,res, body) => {
